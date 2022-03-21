@@ -1,0 +1,19 @@
+.story {
+  .cols-container {
+    flex-direction: column-reverse;
+    align-items: center;
+
+    h2 {
+      font-weight: 500;
+    }
+
+    @screen lg {
+      flex-direction: row;
+    }
+
+    .story__icon {
+      display: flex;
+      justify-content: center;
+    }
+  }
+}

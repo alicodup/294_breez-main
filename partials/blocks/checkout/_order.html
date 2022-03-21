@@ -1,0 +1,48 @@
+<section
+  class="c-cart hidden lg:block bg-shade-grey-100 sticky pr-1-cols pl-14 lg:py-20"
+  x-data
+>
+  <div class="container">
+    <h3>Order summary</h3>
+
+    <div class="c-cart__inner">
+      <template x-for="i in 4">
+        <article class="c-cart__item">
+          <div class="w-1/2-cols">
+            <img src="/Mints/Breez-Mints-BerryNighttime.png" alt="" />
+          </div>
+          <div class="w-1/2-cols">
+            <h2 class="f-body-lg font-bold">Original Mint Tin</h2>
+            <p class="f-body leading-5">Berry Nightmare</p>
+            <p class="f-body-lg">$17.50</p>
+            <div x-data="quantity(1)" class="c-quantity mt-4">
+              <template x-if="quantity <= 1">
+                <a href="#!">
+                  <include src="./partials/svg/cart/_bin-icon.svg"></include>
+                </a>
+              </template>
+              <template x-if="quantity > 1">
+                <button type="button" @click="decrease()" aria-label="Minus">
+                  <include src="./partials/svg/cart/_minus-icon.svg"></include>
+                </button>
+              </template>
+              <p class="f-body-lg mx-2" x-text="quantity"></p>
+              <button type="button" @click="increase()" aria-label="Add">
+                <include src="./partials/svg/cart/_add-icon.svg"></include>
+              </button>
+            </div>
+          </div>
+        </article>
+      </template>
+    </div>
+
+    <!-- <div class="mt-16 mb-10 flex justify-between">
+      <p class="f-display">Total</p>
+      <p class="f-display">$150</p>
+    </div> -->
+
+    <!-- <a href="/checkout.html" class="btn-primary block text-center"
+      >To Checkout</a
+    > -->
+  </div>
+</section>

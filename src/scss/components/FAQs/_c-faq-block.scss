@@ -1,0 +1,74 @@
+.c-faq__block {
+  @screen lg {
+    display: flex;
+    justify-content: space-between;
+    @apply mb-20;
+
+    &.global {
+      @apply mb-0;
+    }
+  }
+
+  .c-faq__block-title {
+    @apply hidden;
+
+    @screen lg {
+      display: block;
+    }
+  }
+
+  .c-faq__block-accordion {
+    @apply border-b border-primary;
+    width: 100%;
+
+    button {
+      width: 100%;
+      text-align: left;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      @apply py-4;
+
+      h4 {
+        @apply f-display-sm;
+        @apply font-normal;
+        @apply mb-0;
+      }
+
+      .accordion-icon {
+        @screen md {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          @apply bg-primary;
+          @apply rounded-md;
+          @apply font-light;
+          font-size: 30px;
+          width: 40px;
+          height: 40px;
+
+          span {
+            margin-top: -6px;
+            -moz-user-select: none;
+            -khtml-user-select: none;
+            -webkit-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+          }
+        }
+      }
+    }
+
+    .c-faq__block-text {
+      .block-text__inner {
+        @apply pb-4;
+
+        h4 {
+          @apply font-normal;
+          font-size: 16px;
+          font-weight: 500;
+        }
+      }
+    }
+  }
+}

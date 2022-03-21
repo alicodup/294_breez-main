@@ -1,0 +1,33 @@
+.c-page-hero {
+  @apply ratio ratio-16x9;
+  margin-bottom: 32px;
+
+  @screen lg {
+    margin-bottom: 80px;
+  }
+
+  @screen xxl {
+    @apply ratio-16x7;
+  }
+
+  img {
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  svg {
+    position: absolute;
+    @apply inset-0;
+    margin: auto;
+    max-width: 70%;
+
+    @screen lg {
+      max-width: 50%;
+    }
+
+    @screen xxl {
+      max-width: 30%;
+    }
+  }
+}

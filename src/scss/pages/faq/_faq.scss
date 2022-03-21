@@ -1,0 +1,14 @@
+.faq {
+  margin-bottom: 32px;
+
+  @screen lg {
+    @apply mt-52;
+    margin-bottom: 80px;
+  }
+
+  .faq__inner {
+    .faq__title {
+      @apply mb-6;
+    }
+  }
+}

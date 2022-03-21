@@ -1,0 +1,327 @@
+<section
+  id="cannabinoids"
+  class="c-alt-columns"
+  :class="activeNav === $el.id ? 'is-active' : ''"
+  x-intersect:enter.half="activeNav = $el.id"
+>
+  <div class="container md:px-1-cols lg:px-0">
+    <div class="c-alt-columns__inner">
+      <div class="cols-container alternate">
+        <article
+          class="column-content w-6-cols md:w-8-cols lg:w-5-cols lg:mr-1-cols"
+        >
+          <div class="mb-10">
+            <h2>Cannabinoids: THC, CBD, CBN</h2>
+            <p>
+              The cannabis plant produces over 100 different compounds known as
+              ‘cannabinoids’ that each possess different effects and benefits.
+              THC and CBD are the best known and most researched of all the
+              cannabinoids but they’re just the start. We’re learning more every
+              day about the benefits of other powerful cannabinoids like CBN
+              which you’ll find in our Berry Nighttime formula.
+            </p>
+          </div>
+
+          <!-- Tab section -->
+
+          <div x-data="{ openTab: 1 }" class="c-tabs mb-10">
+            <!-- Tabs -->
+            <ul>
+              <li @click="openTab = 1">
+                <a
+                  href="javascript:void(0);"
+                  :class="openTab == 1 ? 'tab-active' : ''"
+                  >THC</a
+                >
+              </li>
+              <li @click="openTab = 2">
+                <a
+                  href="javascript:void(0);"
+                  :class="openTab == 2 ? 'tab-active' : ''"
+                  >CBD</a
+                >
+              </li>
+              <li @click="openTab = 3">
+                <a
+                  href="javascript:void(0);"
+                  :class="openTab == 3 ? 'tab-active' : ''"
+                  >CBN</a
+                >
+              </li>
+            </ul>
+
+            <!-- Open tab 1 -->
+            <article x-show="openTab === 1" class="open-tab">
+              <div class="tab-row top">
+                <div class="tab-icon">
+                  <include
+                    src="partials/svg/cannabis-101/_green-tick.svg"
+                  ></include>
+                </div>
+                <div class="tab-copy">
+                  <p>Psychoactivity (Feeling “High”)</p>
+                </div>
+              </div>
+
+              <div class="tab-row sub-title">
+                <div class="tab-title">
+                  <h4>benefits</h4>
+                </div>
+              </div>
+
+              <div class="tab-row">
+                <article class="flex items-center flex-1">
+                  <div class="tab-icon">
+                    <include
+                      src="partials/svg/cannabis-101/_green-tick.svg"
+                    ></include>
+                  </div>
+                  <div class="tab-copy">
+                    <p>Pain Relief</p>
+                  </div>
+                </article>
+
+                <article class="flex items-center flex-1">
+                  <div class="tab-icon">
+                    <include
+                      src="partials/svg/cannabis-101/_green-tick.svg"
+                    ></include>
+                  </div>
+                  <div class="tab-copy">
+                    <p>Mood Boost</p>
+                  </div>
+                </article>
+              </div>
+
+              <div class="tab-row">
+                <article class="flex items-center flex-1">
+                  <div class="tab-icon">
+                    <include
+                      src="partials/svg/cannabis-101/_green-tick.svg"
+                    ></include>
+                  </div>
+                  <div class="tab-copy">
+                    <p>Anti-inflamtory</p>
+                  </div>
+                </article>
+
+                <article class="flex items-center flex-1">
+                  <div class="tab-icon">
+                    <include
+                      src="partials/svg/cannabis-101/_green-tick.svg"
+                    ></include>
+                  </div>
+                  <div class="tab-copy">
+                    <p>Relaxation</p>
+                  </div>
+                </article>
+              </div>
+            </article>
+
+            <!-- Open tab 2 -->
+            <article x-show="openTab === 2" class="open-tab">
+              <div class="tab-row top">
+                <div class="tab-icon">
+                  <include
+                    src="partials/svg/cannabis-101/_red-cross.svg"
+                  ></include>
+                </div>
+                <div class="tab-copy">
+                  <p>Psychoactivity (Feeling “High”)</p>
+                </div>
+              </div>
+
+              <div class="tab-row sub-title">
+                <div class="tab-title">
+                  <h4>benefits</h4>
+                </div>
+              </div>
+
+              <div class="tab-row">
+                <article class="flex items-center flex-1">
+                  <div class="tab-icon">
+                    <include
+                      src="partials/svg/cannabis-101/_green-tick.svg"
+                    ></include>
+                  </div>
+                  <div class="tab-copy">
+                    <p>Anti-Anxiety</p>
+                  </div>
+                </article>
+
+                <article class="flex items-center flex-1">
+                  <div class="tab-icon">
+                    <include
+                      src="partials/svg/cannabis-101/_green-tick.svg"
+                    ></include>
+                  </div>
+                  <div class="tab-copy">
+                    <p>Anti-inflammatory</p>
+                  </div>
+                </article>
+              </div>
+
+              <div class="tab-row">
+                <article class="flex items-center flex-1">
+                  <div class="tab-icon">
+                    <include
+                      src="partials/svg/cannabis-101/_green-tick.svg"
+                    ></include>
+                  </div>
+                  <div class="tab-copy">
+                    <p>Antioxidant</p>
+                  </div>
+                </article>
+
+                <article class="flex items-center flex-1">
+                  <div class="tab-icon">
+                    <include
+                      src="partials/svg/cannabis-101/_green-tick.svg"
+                    ></include>
+                  </div>
+                  <div class="tab-copy">
+                    <p>Pain Relief</p>
+                  </div>
+                </article>
+              </div>
+            </article>
+
+            <!-- Open tab 3 -->
+            <article x-show="openTab === 3" class="open-tab">
+              <div class="tab-row top">
+                <div class="tab-icon">
+                  <include
+                    src="partials/svg/cannabis-101/_red-cross.svg"
+                  ></include>
+                </div>
+                <div class="tab-copy">
+                  <p>Psychoactivity (Feeling “High”)</p>
+                </div>
+              </div>
+
+              <div class="tab-row sub-title">
+                <div class="tab-title">
+                  <h4>benefits</h4>
+                </div>
+              </div>
+
+              <div class="tab-row">
+                <article class="flex items-center flex-1">
+                  <div class="tab-icon">
+                    <include
+                      src="partials/svg/cannabis-101/_green-tick.svg"
+                    ></include>
+                  </div>
+                  <div class="tab-copy">
+                    <p>Sleep</p>
+                  </div>
+                </article>
+              </div>
+            </article>
+          </div>
+
+          <!-- Refs section -->
+          <div x-data="accordion" class="c-faq__block global">
+            <article class="c-faq__block-accordion">
+              <button
+                @click="toggle(0)"
+                class="acc-btn"
+                :class="open === 0 ? 'active' : ''"
+              >
+                <h4>References</h4>
+
+                <div class="accordion-icon">
+                  <span x-text="open === 0 ? '-' : '+'"></span>
+                </div>
+              </button>
+
+              <div class="c-faq__block-text" x-show="open === 0" x-collapse>
+                <div class="block-text__inner">
+                  <p>
+                    Burstein, Sumner.
+                    <a
+                      class="text-primary"
+                      href="https://www.sciencedirect.com/science/article/abs/pii/S0968089615000838?via%3Dihub"
+                      >“Cannabidiol (CBD) and its analogs: a review of their
+                      effects on inflammation.”
+                    </a>
+                    Bioorganic & Medicinal Chemistry vol. 23,7 (2015):
+                    1377-1385.
+                  </p>
+
+                  <p>
+                    El-Alfy, Abir T et al.
+                    <a
+                      class="text-primary"
+                      href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2866040/"
+                    >
+                      “Antidepressant-like effect of delta9-tetrahydrocannbinol
+                      and other cannabinoids isolated from Cannabis sativa L.”
+                    </a>
+                    Pharmacology, biochemistry, and behavior vol. 95,4 (2010):
+                    434-42. doi:10.1016/j.ppb.2010.03.004
+                  </p>
+
+                  <p>
+                    Johnson, Jeremy et al.
+                    <a
+                      class="text-primary"
+                      href="https://www.jpsmjournal.com/article/S0885-3924(09)00787-8/fulltext"
+                      >“Multicenter, Double-blind, Randomized,
+                      Placebo-Controlled, Parallel-Group Study of the Efficacy,
+                      Safety and Tolerability of THC:CBD Extract and THC Extract
+                      in Patients with Intractable Cancer-Related Pain.”
+                    </a>
+                    Journal of Pain and Symptom Management. vol. 39/2 (2010):
+                    167-179
+                  </p>
+
+                  <p>
+                    Russo, Ethan B.
+                    <a
+                      class="text-primary"
+                      href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3165946/"
+                    >
+                      “Taming THC: potential cannabis synergy and
+                      phytocannabinoid-terpenoid entourage effects.”
+                    </a>
+                    British journal of pharmacology vol. 163,7 (2011): 1344-64.
+                    doi:10.1111/j.1476-5381.2011.01238.x
+                  </p>
+
+                  <p>
+                    Saito, Viviane M et al.
+                    <a
+                      class="text-primary"
+                      href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3386505/"
+                    >
+                      “Cannabinoid modulation of neuroinflammatory disorders.”
+                    </a>
+                    Current neuropharmacology vol. 10,2 (2012): 159-66.
+                    doi:10.2174/157015912800604515
+                  </p>
+
+                  <p>
+                    Tambaro, Simone, and Marco Bortolato.
+                    <a
+                      class="text-primary"
+                      href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3691841/"
+                    >
+                      “Cannabinoid-related agents in the treatment of anxiety
+                      disorders: current knowledge and future perspectives.”
+                    </a>
+                    Recent patents on CNS drug discovery vol. 7,1 (2012): 25-40.
+                  </p>
+                </div>
+              </div>
+            </article>
+          </div>
+        </article>
+
+        <article class="column-icon w-6-cols md:w-8-cols lg:w-5-cols">
+          <include src="partials/svg/cannabis-101/_cannabinoids.svg"></include>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>

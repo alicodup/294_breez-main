@@ -1,0 +1,178 @@
+<section x-data="productSwiper" class="feature-products overflow-hidden">
+  <div class="container">
+    <!-- Feature product selectors -->
+    <article class="feature-products__scroller">
+      <div class="feature-products__scroller-wrapper breakout">
+        <ul
+          class="feature-products__scroller-container full-bleed-scroller scrollbar-none md:full-bleed-scroller-reset"
+        >
+          <li class="flex-none">
+            <button
+              @click="toggle(0)"
+              :class="currentSlider != 0 ? '' : 'is-active'"
+              class="slider-button"
+            >
+              Essentials
+            </button>
+          </li>
+          <li class="flex-none">
+            <button
+              @click="toggle(1)"
+              :class="currentSlider != 1 ? '' : 'is-active'"
+              class="slider-button"
+            >
+              Newly Added
+            </button>
+          </li>
+          <li class="flex-none">
+            <button
+              @click="toggle(2)"
+              :class="currentSlider != 2 ? '' : 'is-active'"
+              class="slider-button"
+            >
+              Popular
+            </button>
+          </li>
+        </ul>
+      </div>
+    </article>
+
+    <!-- Essentials Slider main container -->
+    <template x-if="currentSlider === 0">
+      <article
+        class="c-swiper c-feature-swiper"
+        x-ref="slider"
+        x-init="gsapSet($el)"
+        x-intersect.once="gsapEntry($el)"
+      >
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+          <!-- Slides -->
+          <template x-for="(product, index) in essentials" :key="index">
+            <div class="swiper-slide lg-feature">
+              <div class="">
+                <div class="relative">
+                  <a
+                    href="/single-product.html"
+                    class="product-image"
+                    style="--aspect-ratio: (1 / 1)"
+                  >
+                    <img :src="product.image" :alt="product.name" />
+                  </a>
+                </div>
+
+                <article class="product-detail">
+                  <h4 x-text="product.name"></h4>
+                  <a
+                    href="/category.html"
+                    x-text="product.tag"
+                    class="product__type"
+                  >
+                  </a>
+                  <p x-text="product.price"></p>
+
+                  <div>
+                    <span class="c-product-tag" x-text="product.type"></span>
+                  </div>
+                </article>
+
+                <!-- Add to cart button  -->
+                <include src="partials/global/_button-index.html"></include>
+              </div>
+            </div>
+          </template>
+        </div>
+      </article>
+    </template>
+
+    <!-- Newly added Slider main container -->
+    <template x-if="currentSlider === 1">
+      <article
+        class="c-swiper c-feature-swiper"
+        x-ref="slider"
+        x-init="gsapSet($el)"
+        x-intersect.once="gsapEntry($el)"
+      >
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+          <!-- Slides -->
+          <template x-for="(product, index) in newly" :key="index">
+            <div class="swiper-slide lg-feature">
+              <div class="">
+                <div class="relative">
+                  <a
+                    href="/single-product.html"
+                    class="product-image"
+                    style="--aspect-ratio: (1 / 1)"
+                  >
+                    <img :src="product.image" :alt="product.name" />
+                  </a>
+                </div>
+
+                <article class="product-detail">
+                  <h4 x-text="product.name"></h4>
+                  <a href="/category.html" class="product__type">
+                    <span x-text="product.tag"></span>
+                  </a>
+                  <p x-text="product.price"></p>
+
+                  <div>
+                    <span class="c-product-tag" x-text="product.type"></span>
+                  </div>
+                </article>
+
+                <!-- Add to cart button  -->
+                <include src="partials/global/_button-index.html"></include>
+              </div>
+            </div>
+          </template>
+        </div>
+      </article>
+    </template>
+
+    <!-- Popular Slider main container -->
+    <template x-if="currentSlider === 2">
+      <article
+        class="c-swiper c-feature-swiper"
+        x-ref="slider"
+        x-init="gsapSet($el)"
+        x-intersect.once="gsapEntry($el)"
+      >
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+          <!-- Slides -->
+          <template x-for="(product, index) in popular" :key="index">
+            <div class="swiper-slide lg-feature">
+              <div class="">
+                <div class="relative">
+                  <a
+                    href="/single-product.html"
+                    class="product-image"
+                    style="--aspect-ratio: (1 / 1)"
+                  >
+                    <img :src="product.image" :alt="product.name" />
+                  </a>
+                </div>
+
+                <article class="product-detail">
+                  <h4 x-text="product.name"></h4>
+                  <a href="/category.html" class="product__type">
+                    <span x-text="product.tag"></span>
+                  </a>
+                  <p x-text="product.price"></p>
+
+                  <div>
+                    <span class="c-product-tag" x-text="product.type"></span>
+                  </div>
+                </article>
+
+                <!-- Add to cart button  -->
+                <include src="partials/global/_button-index.html"></include>
+              </div>
+            </div>
+          </template>
+        </div>
+      </article>
+    </template>
+  </div>
+</section>

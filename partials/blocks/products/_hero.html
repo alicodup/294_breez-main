@@ -1,0 +1,40 @@
+<section x-data class="products-hero">
+  <div class="container">
+    <div class="products-hero__inner">
+      <div class="cols-container items-center md:px-1-cols lg:px-0">
+        <article class="w-6-cols md:w-8-cols lg:w-5-cols">
+          <h1>Our Products</h1>
+          <p class="max-w-md lg:pb-0">
+            All our products are made using the highest quality full-spectrum
+            extracts to preserve the full natural goodness of the cannabis
+            plant. Take your pick.
+          </p>
+
+          <!-- Filter button -->
+          <button
+            class="fake-input-btn lg:hidden"
+            @click="$store.global.toggleFilterModal()"
+          >
+            Filter by
+
+            <div class="icon">
+              <div>
+                <include src="partials/svg/cart/_add-icon.svg"></include>
+              </div>
+            </div>
+          </button>
+        </article>
+
+        <article class="hidden lg:block w-7-cols">
+          <div class="products-hero__image">
+            <img
+              src="
+                /images/contact/lifestyle-contact.jpg"
+              alt=""
+            />
+          </div>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>

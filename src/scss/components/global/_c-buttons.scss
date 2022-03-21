@@ -1,0 +1,128 @@
+.btn-primary,
+.btn-secondary,
+.btn-shade-500 {
+  @apply f-display-sm;
+  @apply rounded-full;
+  @apply w-full;
+  transition: all 0.3s ease-in-out;
+  padding: 2px 0;
+
+  @screen lg {
+    padding: 5px 0;
+  }
+
+  &.half-width {
+    width: 50%;
+  }
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+
+    // background-image: linear-gradient(
+    //   270deg,
+    //   hsl(42deg 72% 72%) 0%,
+    //   hsl(42deg 72% 74%) 11%,
+    //   hsl(42deg 72% 75%) 22%,
+    //   hsl(42deg 71% 76%) 33%,
+    //   hsl(42deg 71% 77%) 44%,
+    //   hsl(42deg 71% 78%) 56%,
+    //   hsl(42deg 71% 79%) 67%,
+    //   hsl(42deg 71% 80%) 78%,
+    //   hsl(42deg 71% 82%) 89%,
+    //   hsl(42deg 70% 83%) 100%
+    // );
+    // background-size: 200% 200%;
+    // animation: gradient 5s ease infinite;
+  }
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 50%% 0%;
+  }
+  50% {
+    background-position: 100% 0%;
+  }
+  100% {
+    background-position: 0% 0%;
+  }
+}
+
+.btn-primary {
+  @apply f-display-sm;
+  @apply bg-primary;
+}
+
+.btn-secondary {
+  @apply bg-white;
+
+  &.bg-shade {
+    background-color: theme("colors.shade-grey-200");
+  }
+}
+
+.btn-shade-500 {
+  @apply bg-shade-grey-500;
+}
+
+.btn-filter {
+  background-color: theme("colors.shade-grey-200");
+  @apply rounded-md;
+  @apply w-full;
+  @apply f-display-sm font-normal;
+  @apply py-2;
+  text-align: left;
+  text-indent: 30px;
+  position: relative;
+
+  .btn-filter__icon {
+    position: absolute;
+    top: 50%;
+    right: 4px;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    @apply bg-primary;
+    @apply rounded-md;
+    display: flex;
+    overflow: hidden;
+  }
+}
+
+// used for product filter button
+.fake-input-btn {
+  text-align: left;
+  position: relative;
+  background-color: theme("colors.shade-grey-500");
+  @apply rounded-xl;
+  @apply w-full;
+  @apply f-display-sm font-normal;
+  @apply py-1;
+  text-indent: theme("spacing.4");
+  @apply outline-primary;
+
+  position: relative;
+
+  .icon {
+    position: absolute;
+    top: 50%;
+    right: 7px;
+    transform: translateY(-50%);
+    width: 35px;
+    height: 32px;
+    @apply bg-primary;
+    @apply rounded-md;
+    display: flex;
+    overflow: hidden;
+
+    div {
+      position: absolute;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 35px;
+      height: 32px;
+    }
+  }
+}

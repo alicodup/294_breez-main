@@ -1,0 +1,85 @@
+.store-finder-hp {
+  .store-finder-hp__content {
+    h2 {
+      line-height: 40px;
+
+      @screen lg {
+        line-height: 60px;
+      }
+    }
+    p {
+      line-height: 25px;
+    }
+
+    .type-icon {
+      width: 85px;
+
+      svg {
+        path:not(.fill) {
+          stroke: theme('colors.primary');
+        }
+
+        .fill {
+          fill: theme('colors.primary');
+        }
+      }
+    }
+  }
+
+  .store-finder-hp__form {
+    background-color: theme('colors.shade-grey-100');
+  }
+
+  .g-swiper {
+    overflow: hidden;
+
+    .swiper-wrapper {
+      display: flex;
+      align-items: flex-end;
+      transition-timing-function: linear;
+      width: 100%;
+
+      .swiper-slide {
+        width: 400px;
+      }
+
+      // .swiper-slide-duplicate {
+      //   opacity: 1;
+      // }
+      // .swiper-slide-duplicate-active {
+      //   opacity: 0;
+      //   transition: opacity 0.3s ease-in;
+      // }
+    }
+  }
+}
+
+// Global storefinder section
+
+.store-finder {
+  margin-bottom: 32px;
+  margin-top: 32px;
+
+  @screen lg {
+    margin-bottom: 80px;
+    margin-top: 80px;
+  }
+
+  .store-finder__image {
+    height: 210px;
+    width: 100%;
+
+    @screen md {
+      height: 400px;
+    }
+    @screen lg {
+      height: 100%;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}

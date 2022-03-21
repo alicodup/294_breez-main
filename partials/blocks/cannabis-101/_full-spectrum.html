@@ -1,0 +1,37 @@
+<section
+  id="full-spectrum"
+  class="c-alt-columns bg-shade"
+  :class="activeNav === $el.id ? 'is-active' : ''"
+  x-intersect:enter.half="activeNav = $el.id"
+>
+  <div class="container md:px-1-cols lg:px-0">
+    <div class="c-alt-columns__inner">
+      <div class="cols-container">
+        <article class="column-content w-6-cols md:w-8-cols lg:w-5-cols">
+          <h2>Full-spectrum cannabis extract</h2>
+          <p>
+            Millions of years of evolution produced the remarkable plant we call
+            cannabis, a species naturally rich in dozens of compounds (like THC
+            and CBD) that benefit human health and wellbeing. While some
+            compounds from cannabis can have effects in isolation, emerging
+            research shows that the maximum benefits of cannabis are unlocked
+            when multiple cannabinoids work together in what’s known as the
+            ‘entourage effect’.
+          </p>
+          <p>
+            That’s why we use full-spectrum cannabis extract. Unlike distillates
+            and isolates that strip away these beneficial secondary
+            cannabinoids, terpenes and other phytochemicals, our full-spectrum
+            extraction preserves the plant’s complete natural profile including
+            secondary and trace cannabinoids as well as terpenes.
+          </p>
+        </article>
+        <article
+          class="column-icon w-6-cols md:w-8-cols lg:w-5-cols lg:ml-2-cols"
+        >
+          <include src="partials/svg/cannabis-101/_full-spectrum.svg"></include>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>

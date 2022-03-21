@@ -1,0 +1,36 @@
+<section
+  id="terpenes"
+  class="c-alt-columns bg-shade"
+  :class="activeNav === $el.id ? 'is-active' : ''"
+  x-intersect:enter.half="activeNav = $el.id"
+>
+  <div class="container md:px-1-cols lg:px-0">
+    <div class="c-alt-columns__inner">
+      <div class="cols-container">
+        <article class="column-content w-6-cols md:w-8-cols lg:w-5-cols">
+          <h2>Terpenes</h2>
+          <p>
+            Terpenes are natural aromatic molecules that create the distinctive
+            scents found in many plants, including cannabis. The distinctive
+            smell of citrus, for example, is produced by limonene which is also
+            found in certain cannabis plants. Not only do terpenes produce
+            specific aromas, they also have therapeutic effects.
+          </p>
+          <p>
+            Our products combine specific cannabinoids with natural
+            plant-derived terpenes from peppermint, cinnamon, oranges and more.
+            Peppermint for example contains the terpenes menthol, known for its
+            uplifting and soothing effects which in combination with 5 MG of THC
+            in Breez Original Mints creates a refreshing experience perfect for
+            regular daytime use.
+          </p>
+        </article>
+        <article
+          class="column-icon w-6-cols md:w-8-cols lg:w-5-cols lg:ml-2-cols"
+        >
+          <include src="partials/svg/cannabis-101/_terpenes.svg"></include>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>

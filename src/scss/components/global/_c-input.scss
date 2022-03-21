@@ -1,0 +1,115 @@
+input,
+textarea {
+  position: relative;
+  background-color: theme("colors.shade-grey-500");
+  @apply rounded-xl;
+  @apply w-full;
+  @apply f-display-sm font-normal;
+  // @apply py-1;
+  padding: 6px 0;
+  text-indent: theme("spacing.4");
+  @apply outline-primary;
+}
+
+.c-input {
+  position: relative;
+
+  .send-icon {
+    position: absolute;
+    top: 50%;
+    right: 7px;
+    transform: translateY(-50%);
+    width: 35px;
+    height: 32px;
+    @apply bg-primary;
+    @apply rounded-md;
+    display: flex;
+    overflow: hidden;
+    cursor: pointer;
+
+    div {
+      position: absolute;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 100%;
+
+      &:nth-child(2) {
+        transform: translateX(-28px);
+      }
+
+      svg {
+        transition: all 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+        width: 18px;
+      }
+      .alt-icon {
+        transition: all 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+        width: 25px;
+      }
+      .alt-icon-p {
+        transition: all 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+        width: 30px;
+        transform: translateX(7px);
+      }
+    }
+
+    &:hover {
+      svg {
+        transform: translateX(155%);
+      }
+
+      .alt-icon {
+        transform: translateX(112%);
+      }
+      .alt-icon-p {
+        transform: translateX(115%);
+      }
+    }
+  }
+}
+
+.c-input-select {
+  position: relative;
+  height: 49px;
+  background-color: theme("colors.shade-grey-500");
+  @apply rounded-xl;
+  @apply w-full;
+  @apply f-display-sm font-normal;
+  color: rgb(159, 171, 182);
+
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+  select {
+    // A reset of styles, including removing the default dropdown arrow
+    appearance: none;
+    // Additional resets for further consistency
+    background-color: transparent;
+    border: none;
+    padding: 0 1em 0 0;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    font-family: inherit;
+    font-size: inherit;
+    cursor: inherit;
+    line-height: inherit;
+    @apply py-2 px-4;
+    @apply outline-primary;
+  }
+
+  select::-ms-expand {
+    display: none;
+  }
+
+  svg {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: theme("spacing.2");
+  }
+}

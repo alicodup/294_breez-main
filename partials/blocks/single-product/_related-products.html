@@ -1,0 +1,45 @@
+<section
+  x-data="productSwiper"
+  @resize.window.debounce.200ms="checkSlider"
+  class="bg-shade-grey-100 py-8 lg:pb-10 overflow-hidden related-products"
+>
+  <div class="container">
+    <h3 class="f-display w-1/2-cols mb-8">Customers also like</h3>
+
+    <!-- Slider main container -->
+    <article class="c-swiper c-feature-swiper">
+      <!-- Additional required wrapper -->
+      <div class="swiper-wrapper">
+        <!-- Slides -->
+        <template x-for="product in essentials">
+          <div class="swiper-slide lg-feature">
+            <article>
+              <div class="product-image" style="--aspect-ratio: (1 / 1)">
+                <img :src="product.image" :alt="product.name" />
+              </div>
+            </article>
+
+            <article class="product-detail">
+              <h4 x-text="product.name"></h4>
+              <a
+                href="/category.html"
+                :class="product.color"
+                class="product__type"
+              >
+                <span x-text="product.tag"></span>
+              </a>
+              <p x-text="product.price"></p>
+
+              <div>
+                <span class="c-product-tag" x-text="product.type"></span>
+              </div>
+            </article>
+
+            <!-- Add to cart button  -->
+            <include src="partials/global/_button-index.html"></include>
+          </div>
+        </template>
+      </div>
+    </article>
+  </div>
+</section>

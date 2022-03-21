@@ -1,0 +1,24 @@
+.c-cart {
+  top: 130px;
+
+  .c-cart__inner {
+    .c-cart__item {
+      @apply py-8;
+      @apply border-b border-primary;
+      display: flex;
+      align-items: center;
+
+      img {
+        @apply transform -translate-x-4;
+      }
+    }
+  }
+
+  .total {
+    @apply f-display-sm font-medium;
+
+    @screen lg {
+      @apply f-display;
+    }
+  }
+}

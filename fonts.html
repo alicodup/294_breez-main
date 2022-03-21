@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Breez</title>
+
+    <link rel="stylesheet" href="https://use.typekit.net/zvu3msd.css" />
+    <link rel="stylesheet" href="./src/scss/_entry.scss" />
+  </head>
+  <body>
+    <header>
+      <include src="partials/global/_header.html"></include>
+    </header>
+
+    <main class="py-24 text-center space-y-16 c-fonts">
+      <h1 class="f-display-xlg table border mx-auto">f-display-xlg</h1>
+      <h3 class="f-display table border mx-auto">f-display</h3>
+      <h4 class="f-display-sm table border mx-auto">f-display-sm</h4>
+      <h5 class="f-display-xsm table border mx-auto">f-display-xsm</h5>
+
+      <p class="f-body-lg table border mx-auto">f-body-lg</p>
+      <p class="f-body table border mx-auto">f-body</p>
+      <p class="f-detail table border mx-auto">f-detail</p>
+    </main>
+
+    <footer>
+      <include src="partials/global/_footer.html"></include>
+    </footer>
+
+    <!-- Dev grid -->
+    <include src="./partials/utilities/_dev-grid.html"></include>
+
+    <script type="module" src="./src/js/_entry.js"></script>
+  </body>
+</html>

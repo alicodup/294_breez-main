@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Breez</title>
+
+    <link rel="stylesheet" href="https://use.typekit.net/zvu3msd.css" />
+    <link rel="stylesheet" href="./src/scss/_entry.scss" />
+  </head>
+  <body style="--product-color: #b03b74">
+    <header>
+      <include src="partials/global/_header.html"></include>
+    </header>
+    <!-- <div class="h-header"></div> -->
+
+    <include src="partials/global/_age-gate.html"></include>
+
+    <main>
+      <!-- Product Images -->
+      <div class="cols-container">
+        <div class="w-full lg:w-1/2-cols">
+          <include
+            src="partials/blocks/single-product/_product-images.html"
+          ></include>
+        </div>
+
+        <div class="w-full lg:w-1/2-cols">
+          <include
+            src="partials/blocks/single-product/_product-main.html"
+          ></include>
+
+          <include
+            src="partials/blocks/single-product/_product-details.html"
+          ></include>
+        </div>
+      </div>
+
+      <include
+        src="partials/blocks/single-product/_store-finder.html"
+      ></include>
+
+      <include
+        src="partials/blocks/single-product/_related-products.html"
+      ></include>
+
+      <include src="partials/global/_mailing-list.html"></include>
+    </main>
+
+    <footer>
+      <include src="partials/global/_footer.html"></include>
+    </footer>
+
+    <!-- Dev grid -->
+    <include src="./partials/utilities/_dev-grid.html"></include>
+
+    <script type="module" src="./src/js/_entry.js"></script>
+  </body>
+</html>

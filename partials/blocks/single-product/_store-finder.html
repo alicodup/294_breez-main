@@ -1,0 +1,56 @@
+<section x-data class="store-finder">
+  <div class="store-finder__inner">
+    <div class="container lg:items-center">
+      <div
+        class="cols-container space-y-6 md:px-1-cols lg:px-0 lg:items-center"
+      >
+        <aside class="md:w-6/12-cols lg:w-5-cols store-finder__image">
+          <img src="/images/home/product-search.jpg" alt="" />
+        </aside>
+
+        <div class="w-8-cols lg:w-5-cols lg:ml-1-cols space-y-10 xxl:w-4-cols">
+          <article>
+            <h2>Cannabis for Everyday Life</h2>
+            <p>
+              Cannabis-infused mints, sprays and tablets. Search below to find
+              Breez in your area.
+            </p>
+          </article>
+
+          <form class="space-y-4" action="">
+            <div class="c-input">
+              <input name="zipcode" type="text" placeholder="Zip Code" />
+
+              <div class="send-icon">
+                <div>
+                  <include
+                    src="partials/svg/mailing-list/_send-icon.svg"
+                  ></include>
+                </div>
+                <div>
+                  <include
+                    src="partials/svg/mailing-list/_send-icon.svg"
+                  ></include>
+                </div>
+              </div>
+            </div>
+
+            <div>
+              <a href="/stores.html">
+                <button class="btn-primary" type="submit">Find a Store</button>
+              </a>
+            </div>
+
+            <div>
+              <a href="/products.html">
+                <button class="btn-secondary bg-shade" type="button">
+                  Order Delivery
+                </button>
+              </a>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,37 @@
+<section x-data class="cat-hero">
+  <div class="container">
+    <div class="cat-hero__inner">
+      <div class="cols-container md:px-1-cols lg:px-0">
+        <article class="cat-hero__title lg:w-4-cols">
+          <h1>Mints</h1>
+        </article>
+
+        <article class="cat-hero__intro lg:w-4-cols">
+          <p>
+            Stay fresh with our cannabis-infused mints. Packed in a
+            pocket-friendly tin, these mints offer convenient, precise dosing
+            for daily use.
+          </p>
+        </article>
+
+        <article class="cat-hero__icon">
+          <include src="partials/svg/product/_mint-icon.svg"></include>
+        </article>
+      </div>
+
+      <!-- Filter button -->
+      <button
+        class="fake-input-btn lg:hidden"
+        @click="$store.global.toggleFilterModal()"
+      >
+        Filter by
+
+        <div class="icon">
+          <div>
+            <include src="partials/svg/cart/_add-icon.svg"></include>
+          </div>
+        </div>
+      </button>
+    </div>
+  </div>
+</section>

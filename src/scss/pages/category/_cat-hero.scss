@@ -1,0 +1,40 @@
+.cat-hero {
+  @apply bg-primary;
+  @apply py-8;
+
+  margin-top: 72px;
+  margin-bottom: 32px;
+
+  @screen lg {
+    @apply bg-white;
+  }
+
+  .cat-hero__inner {
+    @apply relative;
+
+    .cat-hero__title {
+      h1 {
+        @apply f-display-lg;
+        @apply mb-6;
+
+        @screen lg {
+          @apply mb-0;
+        }
+      }
+    }
+
+    .cat-hero__intro {
+    }
+
+    .cat-hero__icon {
+      @apply hidden;
+      @apply absolute;
+      @apply right-0;
+      width: 125px;
+
+      @screen lg {
+        @apply block;
+      }
+    }
+  }
+}

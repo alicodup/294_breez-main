@@ -1,0 +1,165 @@
+<section x-data="storeLocator" class="store-locator">
+  <div class="lg:flex">
+    <!-- Mobile search -->
+    <div class="lg:hidden">
+      <article class="store-locator__search">
+        <div class="container md:px-1-cols lg:px-0">
+          <div class="c-input mb-4">
+            <input
+              x-model="zipcode"
+              type="text"
+              name="zipcode"
+              id="zipcode"
+              placeholder="Zip Code"
+              aria-label="Zip code"
+            />
+
+            <button class="send-icon">
+              <div>
+                <include
+                  src="partials/svg/mailing-list/_send-icon.svg"
+                ></include>
+              </div>
+              <div>
+                <include
+                  src="partials/svg/mailing-list/_send-icon.svg"
+                ></include>
+              </div>
+            </button>
+          </div>
+
+          <button
+            @click="$store.global.toggleFilterModal()"
+            class="btn-secondary"
+          >
+            Filter
+          </button>
+        </div>
+      </article>
+    </div>
+
+    <!-- Map section -->
+    <article
+      x-data="mapMarkers"
+      class="map-section lg:w-1/2 xl:w-2/3"
+      @init-map.window="initMap"
+    >
+      <!-- Google map -->
+      <div loading="lazy" allowfullscreen class="map-section relative">
+        <div id="map" class="c-store-locator__map"></div>
+      </div>
+    </article>
+
+    <!-- Right Col section (on desktop) -->
+    <div class="store-locator__scroll-container lg:w-1/2 xl:w-1/3">
+      <article class="store-locator__search desktop">
+        <div class="container">
+          <div class="lg:w-12-cols xxl:w-5-cols xxl:px-1-cols">
+            <div class="c-input mb-4">
+              <input
+                x-model="zipcode"
+                type="text"
+                name="zipcode"
+                id="zipcode"
+                placeholder="Zip Code"
+                aria-label="Zip code"
+              />
+
+              <div
+                class="radius"
+                x-data="{
+                open: false,
+                toggle: function(input) {
+                  this.radius = input
+                  this.open = false
+                }
+              }"
+                @click.away="open = false"
+              >
+                <button @click="open = !open" class="radius-btn space-x-2">
+                  <span x-text="radius"></span>
+                  <span>mi</span>
+                </button>
+                <div
+                  class="radius-dropdown"
+                  x-show="open"
+                  x-transition:enter="transition ease-out duration-200 transform"
+                  x-transition:enter-start="opacity-0 translate-y-1"
+                  x-transition:enter-end="opacity-100 translate-y-0"
+                  x-transition:leave="transition ease-in duration-200 transform"
+                  x-transition:leave-start="opacity-100 translate-y-0"
+                  x-transition:leave-end="opacity-0 translate-y-1"
+                >
+                  <button @click="toggle(10)">10 miles</button>
+                  <button @click="toggle(25)">25 miles</button>
+                  <button @click="toggle(50)">50 miles</button>
+                  <button @click="toggle(100)">100 miles</button>
+                </div>
+              </div>
+
+              <button class="send-icon">
+                <div>
+                  <include
+                    src="partials/svg/mailing-list/_send-icon.svg"
+                  ></include>
+                </div>
+                <div>
+                  <include
+                    src="partials/svg/mailing-list/_send-icon.svg"
+                  ></include>
+                </div>
+              </button>
+            </div>
+
+            <button
+              @click="$store.global.toggleFilterModal()"
+              class="btn-secondary"
+            >
+              Filter
+            </button>
+          </div>
+        </div>
+      </article>
+
+      <!-- Results section -->
+      <article class="store-locator__result">
+        <div class="container md:px-1-cols md:py-10 lg:px-0">
+          <div class="lg:w-12-cols xxl:w-5-cols xxl:px-1-cols">
+            <h3>12 stores found near [your location]</h3>
+            <h4>Call ahead to confirm product is in stock</h4>
+          </div>
+        </div>
+      </article>
+
+      <!-- Store details -->
+      <template x-data x-for="i in 12">
+        <div class="container md:px-1-cols lg:px-0">
+          <div class="lg:w-12-cols xxl:w-5-cols xxl:px-1-cols">
+            <article class="store-locator__details">
+              <h3>Store Name</h3>
+
+              <div class="mb-5">
+                <h4 class="f-body font-medium">
+                  427 Parkway Street, CA, 90017
+                </h4>
+
+                <aside>
+                  <div class="details__contact">
+                    <include src="partials/svg/store/_phone-icon.svg"></include>
+                    <p>760-309-4864</p>
+                  </div>
+                  <div class="details__contact">
+                    <include src="partials/svg/store/_web-icon.svg"></include>
+                    <p>google.com</p>
+                  </div>
+                </aside>
+              </div>
+
+              <button class="btn-secondary btn-shade-500">Show on map</button>
+            </article>
+          </div>
+        </div>
+      </template>
+    </div>
+  </div>
+</section>

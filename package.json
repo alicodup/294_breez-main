@@ -1,0 +1,30 @@
+{
+  "name": "breez",
+  "private": true,
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "vite": "^2.8.0"
+  },
+  "dependencies": {
+    "@alpinejs/collapse": "^3.8.1",
+    "@alpinejs/intersect": "^3.8.1",
+    "@area17/a17-tailwind-plugins": "^3.6.1",
+    "alpinejs": "^3.8.1",
+    "autoprefixer": "^10.4.2",
+    "body-scroll-lock": "^4.0.0-beta.0",
+    "gsap": "^3.9.1",
+    "lazysizes": "^5.3.2",
+    "lottie-web": "^5.8.1",
+    "postcss": "^8.4.6",
+    "posthtml": "^0.16.5",
+    "posthtml-include": "^1.7.2",
+    "sass": "^1.49.7",
+    "swiper": "^8.0.5",
+    "tailwindcss": "^3.0.19"
+  }
+}

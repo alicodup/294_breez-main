@@ -1,0 +1,97 @@
+<section class="c-product-main bg-white pt-10 lg:pt-40">
+  <div class="container md:px-1-cols lg:px-0 xxl:w-7-cols">
+    <article>
+      <h3 class="f-display-sm font-normal text-primary">Hit your sweet spot</h3>
+      <h1 class="f-display">Berry Nighttime Mints</h1>
+
+      <div class="mt-4">
+        <a href="" class="c-product-tag">Active</a>
+        <a href="" class="c-product-tag">Sativa</a>
+      </div>
+
+      <div class="flex divide-x-2 divide-shade-grey-200 mt-4 mb-4">
+        <div class="space-y-1 pr-6">
+          <p class="f-display font-normal">10mg</p>
+          <p class="f-body">THC per mint</p>
+        </div>
+        <div class="space-y-2 pl-6">
+          <p class="f-display font-normal">x30</p>
+          <p class="f-body">mints</p>
+        </div>
+      </div>
+
+      <div class="flex space-x-6 f-display">
+        <p class="f-display line-through opacity-60">$24</p>
+        <p class="f-display">$18</p>
+      </div>
+    </article>
+
+    <form class="space-y-4 my-8" action="">
+      <div class="c-input">
+        <input name="zipcode" type="text" placeholder="Zip Code" />
+
+        <div class="send-icon">
+          <div>
+            <include src="partials/svg/mailing-list/_send-icon.svg"></include>
+          </div>
+          <div>
+            <include src="partials/svg/mailing-list/_send-icon.svg"></include>
+          </div>
+        </div>
+      </div>
+
+      <div class="cols-container">
+        <!-- <template x-if="step === 0"> -->
+        <div x-data="quantity(1)" class="c-quantity w-1/2-cols width-half">
+          <!-- <template x-if="quantity <= 1">
+            <a href="#!">
+              <include src="./partials/svg/cart/_bin-icon.svg"></include>
+            </a>
+          </template> -->
+          <template x-if="quantity > -1">
+            <button type="button" @click="decrease()" aria-label="Minus">
+              <include src="./partials/svg/cart/_minus-icon.svg"></include>
+            </button>
+          </template>
+          <p class="f-body-lg" x-text="quantity"></p>
+          <button type="button" @click="increase()" aria-label="Add">
+            <include src="./partials/svg/cart/_add-icon.svg"></include>
+          </button>
+        </div>
+
+        <div class="w-1/2-cols">
+          <button type="button" class="btn-primary">Add to Cart</button>
+        </div>
+        <!-- </template> -->
+
+        <!-- <template x-if="step === 1">
+          <div x-data="quantity(1)" class="btn-primary btn-quantity">
+            <template x-if="quantity <= 1">
+              <a href="#!">
+                <include src="./partials/svg/cart/_bin-icon.svg"></include>
+              </a>
+            </template>
+            <template x-if="quantity > 1">
+              <button type="button" @click="decrease()" aria-label="Minus">
+                <include src="./partials/svg/cart/_minus-icon.svg"></include>
+              </button>
+            </template>
+            <p class="f-body-lg" x-text="quantity"></p>
+            <button type="button" @click="increase()" aria-label="Add">
+              <include src="./partials/svg/cart/_add-icon.svg"></include>
+            </button>
+          </div>
+        </template> -->
+      </div>
+
+      <button class="btn-shade-500 bg-shade" type="button">Find a Store</button>
+    </form>
+
+    <p>
+      Classic peppermint flavor plus an easygoing 5 MG THC make Original Mint
+      our go-to for enhancing the everyday whether you're drafting expense
+      reports, climbing hills in spin class or making dinner with friends. With
+      20 mints in each pocket-friendly tin, there's plenty to share.
+    </p>
+  </div>
+</section>

@@ -1,0 +1,50 @@
+<div x-data class="c-secondary-nav">
+  <div class="container">
+    <nav>
+      <ul>
+        <li>
+          <a
+            :class="activeNav === 'precise-dosing' ? 'is-active': ''"
+            href="#precise-dosing"
+            >Precise Dosing</a
+          >
+        </li>
+        <li>
+          <a
+            :class="activeNav === 'cannabinoids' ? 'is-active': ''"
+            href="#cannabinoids"
+            >Cannabinoids</a
+          >
+        </li>
+        <li>
+          <a
+            :class="activeNav === 'full-spectrum' ? 'is-active': ''"
+            href="#full-spectrum"
+            >Full-spectrum</a
+          >
+        </li>
+        <li>
+          <a
+            :class="activeNav === 'sublingual' ? 'is-active': ''"
+            href="#sublingual"
+            >Sublingual delivery</a
+          >
+        </li>
+        <li>
+          <a
+            :class="activeNav === 'terpenes' ? 'is-active': ''"
+            href="#terpenes"
+            >Terpenes</a
+          >
+        </li>
+        <li>
+          <a
+            :class="activeNav === 'e-system' ? 'is-active': ''"
+            href="#e-system"
+            >Endocannabinoid System</a
+          >
+        </li>
+      </ul>
+    </nav>
+  </div>
+</div>

@@ -1,0 +1,24 @@
+.c-range-filter {
+  .filter__button {
+    background-color: theme("colors.shade-grey-200");
+    @apply rounded-md;
+    @apply w-full;
+    @apply f-display-sm font-normal;
+    @apply py-1;
+    @apply flex items-center justify-between;
+    border: 1px solid white;
+    text-indent: 30px;
+
+    &.dropdown {
+      @apply rounded-t-none;
+    }
+
+    p {
+      @apply mb-0;
+    }
+
+    .filter__icon {
+      margin-right: 4px;
+    }
+  }
+}

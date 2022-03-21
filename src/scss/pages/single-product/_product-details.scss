@@ -1,0 +1,12 @@
+.c-product-details {
+
+  svg {
+    width: 100%;
+  }
+}
+
+// Shifts single product store finder section up to overlay product details
+.c-product-details + .store-finder {
+  margin-top: calc((theme("spacing.24") + 10px) * -1);
+  @apply mb-12;
+}

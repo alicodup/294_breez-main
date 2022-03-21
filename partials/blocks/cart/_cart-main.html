@@ -1,0 +1,45 @@
+<section class="c-cart bg-white" x-data>
+  <div class="container lg:px-3-cols">
+    <h1>Cart</h1>
+
+    <div class="c-cart__inner">
+      <template x-for="i in 4">
+        <article class="c-cart__item">
+          <div class="w-1/2-cols">
+            <img src="/Mints/Breez-Mints-BerryNighttime.png" alt="" />
+          </div>
+          <div class="w-1/2-cols">
+            <h2 class="f-body-lg font-bold mb-2">Original Mint Tin</h2>
+            <p class="f-body">Berry Nightmare</p>
+            <p class="f-body-lg mt-2">$17.50</p>
+            <div x-data="quantity(1)" class="c-quantity mt-4">
+              <template x-if="quantity <= 1">
+                <a href="#!">
+                  <include src="./partials/svg/cart/_bin-icon.svg"></include>
+                </a>
+              </template>
+              <template x-if="quantity > 1">
+                <button type="button" @click="decrease()" aria-label="Minus">
+                  <include src="./partials/svg/cart/_minus-icon.svg"></include>
+                </button>
+              </template>
+              <p class="f-body-lg" x-text="quantity"></p>
+              <button type="button" @click="increase()" aria-label="Add">
+                <include src="./partials/svg/cart/_add-icon.svg"></include>
+              </button>
+            </div>
+          </div>
+        </article>
+      </template>
+    </div>
+
+    <div class="mt-10 mb-5 flex justify-between">
+      <p class="total">Total</p>
+      <p class="total">$150</p>
+    </div>
+
+    <a href="/checkout.html" class="btn-primary block text-center mb-10"
+      >To Checkout</a
+    >
+  </div>
+</section>

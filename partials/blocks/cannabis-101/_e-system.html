@@ -1,0 +1,37 @@
+<section
+  id="e-system"
+  class="c-alt-columns"
+  :class="activeNav === $el.id ? 'is-active' : ''"
+  x-intersect:enter.half="activeNav = $el.id"
+>
+  <div class="container md:px-1-cols lg:px-0">
+    <div class="c-alt-columns__inner">
+      <div class="cols-container alternate">
+        <article
+          class="column-content w-6-cols md:w-8-cols lg:w-5-cols lg:mr-1-cols"
+        >
+          <h2>Endocannabinoid System</h2>
+          <p>
+            The endocannabinoid system or ECS is a system in the human body like
+            the vascular or nervous system. The ECS helps regulate multiple
+            processes including stress, mood, appetite, pain, memory and even
+            the immune system. It consists of receptors throughout the body – in
+            the gastrointestinal system, brain and nervous system and even the
+            skin.
+          </p>
+          <p>
+            The human body actually produces its own cannabinoids (called
+            endocannabinoids) that plug into these receptors. The ‘runner’s
+            high’, originally thought to be related to endorphins, is actually
+            produced by endocannabioids. Plant-based cannabinoids like THC and
+            CBD (called phytocannabinoids) plug into these same receptors and
+            can help balance and regulate the endocannabinoid system.
+          </p>
+        </article>
+        <article class="column-icon w-6-cols md:w-8-cols lg:w-5-cols">
+          <include src="partials/svg/cannabis-101/_e-system.svg"></include>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>

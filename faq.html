@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Breez</title>
+
+    <link rel="stylesheet" href="https://use.typekit.net/zvu3msd.css" />
+    <link rel="stylesheet" href="./src/scss/_entry.scss" />
+  </head>
+  <body>
+    <header>
+      <include src="partials/global/_header.html"></include>
+    </header>
+
+    <main>
+      <!-- Hero section -->
+      <include src="partials/blocks/faq/_hero.html"></include>
+
+      <!-- FAQs section -->
+      <include src="partials/blocks/faq/_faq.html"></include>
+
+      <!-- CTA section -->
+      <include src="partials/blocks/faq/_cta.html"></include>
+
+      <!-- Mailing list section -->
+      <include src="partials/global/_mailing-list.html"></include>
+    </main>
+
+    <footer>
+      <include src="partials/global/_footer.html"></include>
+    </footer>
+
+    <!-- Dev grid -->
+    <include src="./partials/utilities/_dev-grid.html"></include>
+
+    <script type="module" src="./src/js/_entry.js"></script>
+  </body>
+</html>

@@ -1,0 +1,86 @@
+<section class="store-finder-hp">
+  <div class="container md:px-1-cols">
+    <div class="store-finder-hp__content pb-10 lg:py-40">
+      <div class="cols-container">
+        <!-- Content -->
+        <article class="w-6-cols mb-10">
+          <h2 class="f-display-lg mb-6">
+            <span class="block">Cannabis for</span> Everyday Life
+          </h2>
+          <p class="f-display-sm mb-6">
+            Cannabis-infused mints, sprays and tablets.
+          </p>
+
+          <div class="flex space-x-8">
+            <div class="type-icon">
+              <include src="partials/svg/product/_mint-icon.svg"></include>
+            </div>
+            <div class="type-icon">
+              <include src="partials/svg/product/_spray-icon.svg"></include>
+            </div>
+            <div class="type-icon">
+              <include src="partials/svg/product/_tablet-icon.svg"></include>
+            </div>
+          </div>
+        </article>
+
+        <!-- Form -->
+        <article class="store-finder-hp__form w-6-cols md:w-8-cols lg:w-6-cols">
+          <div class="text-center px-4 md:px-10 lg:px-16 py-10 lg:py-12">
+            <p class="f-display-sm mb-8">Search Breez in your area.</p>
+            <form class="space-y-4" action="/stores.html">
+              <div class="c-input">
+                <input name="zipcode" type="text" placeholder="Zip Code" />
+
+                <div class="send-icon">
+                  <div>
+                    <include
+                      src="partials/svg/mailing-list/_send-icon.svg"
+                    ></include>
+                  </div>
+                  <div>
+                    <include
+                      src="partials/svg/mailing-list/_send-icon.svg"
+                    ></include>
+                  </div>
+                </div>
+              </div>
+
+              <button class="btn-primary" type="submit">Find a Store</button>
+
+              <div>
+                <a href="/products.html">
+                  <button class="btn-secondary btn-shade-500" type="button">
+                    Order Delivery
+                  </button>
+                </a>
+              </div>
+            </form>
+          </div>
+        </article>
+      </div>
+    </div>
+  </div>
+
+  <!-- Image gallery swiper -->
+  <div x-data="hpGallery" class="g-swiper">
+    <div class="swiper-wrapper">
+      <!-- Slides -->
+      <div class="swiper-slide">
+        <img src="/images/home/lifestyle-image-sf.jpg" alt="" />
+      </div>
+
+      <div class="swiper-slide">
+        <img src="/images/global/mailing-list-image-top.jpg" alt="" />
+      </div>
+
+      <div class="swiper-slide">
+        <img src="/images/global/mailing-list-image-bottom.jpg" alt="" />
+      </div>
+
+      <div class="swiper-slide">
+        <img src="/images/global/mailing-list-image-top.jpg" alt="" />
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,160 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  @import "./helpers/_lh-crop";
+}
+
+// ** Helpers **
+@import "swiper/scss";
+
+// @import "swiper/scss/navigation";
+@import "./helpers/_aspect-ratio";
+@import "./helpers/_selector-spacing";
+
+// ** Components **
+// Global
+@import "./components/global/c-header";
+@import "./components/global/c-footer";
+@import "./components/global/c-buttons";
+@import "./components/global/c-input";
+@import "./components/global/c-mailing-list";
+@import "./components/global/c-product-swiper";
+@import "./components/global/c-modal";
+@import "./components/global/c-hero";
+@import "./components/global/page-hero";
+@import "./components/FAQs/c-faq-block";
+@import "./components/categories/c-range-filter";
+@import "./components/global/c-secondary-nav";
+@import "./components/products/c-product-filter";
+@import "./components/stores/c-stores-modal";
+@import "./components/global/c-checkout-nav";
+@import "./components/global/c-testimonial";
+@import "./components/global/c-alt-columns";
+
+// ** Pages **
+// Home
+@import "./pages/home/_hero";
+@import "./pages/home/_store-finder";
+@import "./pages/home/feature-products";
+@import "./pages/home/formats";
+@import "./pages/home/flavours";
+@import "./pages/home/dose";
+
+// Contact
+@import "./pages/contact/contact-details";
+
+// FAQs
+@import "./pages/faq/faq";
+@import "./pages/faq/faq-cta";
+
+// Single product
+@import "./pages/single-product/_product-images";
+@import "./pages/single-product/_product-details";
+@import "./pages/single-product/_related-products";
+
+// Category page
+@import "./pages/category/cat-hero";
+@import "./pages/category/category-grid";
+
+// Products page
+@import "./pages/products/products-hero";
+@import "./pages/products/products-carousel";
+
+// Cart
+@import "./components/cart/cart-inner";
+@import "./components/cart/quantity";
+
+// Checkout
+@import "./pages/checkout/form";
+@import "./pages/checkout/summary";
+
+// Stores
+@import "./pages/stores/store-locator";
+
+// Our story
+@import "./pages/our-story/_hero-os";
+@import "./pages/our-story/_story";
+
+// Cannabis 101
+@import "./pages/cannabis-101/hero-101";
+@import "./pages/cannabis-101/c-tabs";
+
+// ** Site-wide **
+[x-cloak] {
+  display: none !important;
+}
+
+body {
+  color: theme("colors.shade-black");
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+
+  h1:not([class*="f-"]) {
+    @apply f-display-lg;
+    @apply mb-6;
+  }
+  h2:not([class*="f-"]) {
+    @apply f-display-lg;
+    @apply mb-6;
+  }
+  h3:not([class*="f-"]) {
+    @apply f-display;
+    @apply mb-4;
+  }
+  h4:not([class*="f-"]) {
+    @apply f-display-sm;
+    @apply mb-2;
+  }
+  h5:not([class*="f-"]) {
+    @apply f-detail;
+  }
+  p:not([class*="f-"]) {
+    @apply f-body;
+    @apply mb-6;
+  }
+}
+html {
+  scroll-behavior: smooth;
+}
+
+.sm {
+  font-size: 22px;
+}
+
+main {
+  margin-top: 72px;
+}
+
+.wysiwyg {
+  @apply space-y-4;
+
+  p {
+    @apply f-body;
+
+    &:not(:last-of-type) {
+      @apply mb-6;
+    }
+  }
+
+  strong {
+    @apply f-body font-bold;
+    display: block;
+  }
+}
+
+.h-underline-headline {
+  position: relative;
+  @apply mb-8;
+
+  &:after {
+    content: "";
+    left: 0;
+    bottom: calc(theme("spacing.4") * -1);
+    @apply bg-primary;
+    position: absolute;
+    width: 100%;
+    height: 1px;
+  }
+}

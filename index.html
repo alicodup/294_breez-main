@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Breez</title>
+
+    <link rel="stylesheet" href="https://use.typekit.net/zvu3msd.css" />
+    <link rel="stylesheet" href="./src/scss/_entry.scss" />
+  </head>
+  <body>
+    <header>
+      <include src="partials/global/_header.html"></include>
+    </header>
+
+    <!-- Age gate modal -->
+    <include src="partials/global/_age-gate.html"></include>
+
+    <main>
+      <!-- Hero section -->
+      <include src="partials/blocks/home/_hero.html"></include>
+
+      <!-- Store finder section -->
+      <include src="partials/blocks/home/_store-finder-hp.html"></include>
+
+      <!-- Feature products section -->
+      <include src="partials/blocks/home/_feature-products.html"></include>
+
+      <!-- Formats section -->
+      <include src="partials/blocks/home/_formats.html"></include>
+
+      <!-- Flavours section -->
+      <include src="partials/blocks/home/_flavours.html"></include>
+
+      <!-- Dose section -->
+      <include src="partials/blocks/home/_dose.html"></include>
+
+      <!-- Testimonial Section -->
+      <include src="partials/global/_testimonial.html"></include>
+
+      <!-- Mailing list section -->
+      <include src="partials/global/_mailing-list.html"></include>
+    </main>
+
+    <footer>
+      <include src="partials/global/_footer.html"></include>
+    </footer>
+
+    <!-- Dev grid -->
+    <include src="./partials/utilities/_dev-grid.html"></include>
+
+    <script type="module" src="./src/js/_entry.js"></script>
+  </body>
+</html>

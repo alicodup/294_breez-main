@@ -1,0 +1,32 @@
+<section
+  class="c-single-product-images ratio ratio-1x1 lg:sticky"
+  x-data="singleProductImages"
+>
+  <!-- Slider main container -->
+  <article class="c-swiper ratio-content" x-ref="slider">
+    <!-- Additional required wrapper -->
+    <div class="swiper-wrapper">
+      <!-- Slides -->
+      <div class="swiper-slide">
+        <div class="product-image">
+          <img src="/Mints/Breez-Mints-BerryNighttime.png" alt="" />
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <img
+          src="//picsum.photos/800/600"
+          alt=""
+          class="absolute inset-0 w-full h-full object-cover"
+        />
+      </div>
+      <div class="swiper-slide">
+        <img src="/Mints/Breez-Mints-BerryNighttime.png" alt="" />
+      </div>
+      <div class="swiper-slide">
+        <img src="/Mints/Breez-Mints-BerryNighttime.png" alt="" />
+      </div>
+    </div>
+
+    <div class="swiper-pagination" x-ref="navigation"></div>
+  </article>
+</section>

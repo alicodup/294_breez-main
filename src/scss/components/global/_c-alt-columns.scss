@@ -1,0 +1,45 @@
+.c-alt-columns {
+  @apply py-10;
+
+  @screen lg {
+    @apply py-40;
+  }
+
+  &.scroll-top {
+    height: 300px;
+  }
+
+  &.bg-shade {
+    background-color: theme("colors.shade-grey-100");
+  }
+
+  .c-alt-columns__inner {
+    .cols-container {
+      flex-direction: column-reverse;
+
+      @screen lg {
+        flex-direction: row;
+      }
+      &.alternate {
+        flex-direction: column-reverse;
+
+        @screen lg {
+          flex-direction: row-reverse;
+        }
+      }
+    }
+
+    .column-content {
+    }
+    .column-icon {
+      display: flex;
+      justify-content: center;
+      @apply mb-10;
+
+      @screen lg {
+        @apply mb-0;
+        justify-content: flex-start;
+      }
+    }
+  }
+}

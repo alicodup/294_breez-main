@@ -1,0 +1,29 @@
+.c-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  @apply z-50;
+  @apply bg-primary bg-opacity-80;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .c-modal__wrapper {
+    @apply bg-white;
+    max-width: 500px;
+    @apply mx-auto;
+
+    .c-modal__inner {
+      @apply px-12 py-10;
+
+      // Age gate modal
+      .c-modal__logo {
+        svg {
+          @apply mx-auto;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,42 @@
+<section x-data="categoryGrid" class="category-grid">
+  <div class="container">
+    <div class="category-grid__inner">
+      <div class="cols-container md:px-1-cols lg:px-0">
+        <template x-for="product in products">
+          <div class="w-3-cols mb-10 md:w-1/2-cols lg:w-3-cols">
+            <div class="">
+              <a
+                href="/single-product.html"
+                class="product-image"
+                style="--aspect-ratio: (1 / 1)"
+              >
+                <!-- <div class="product__type">
+                  <span x-text="product.tag"></span>
+                </div> -->
+                <img :src="product.image" :alt="product.name" />
+              </a>
+
+              <article class="product-detail">
+                <h4 x-text="product.name"></h4>
+                <a
+                  href="/category.html"
+                  x-text="product.tag"
+                  class="product__type"
+                >
+                </a>
+                <p x-text="product.price"></p>
+
+                <div>
+                  <span class="c-product-tag" x-text="product.type"></span>
+                </div>
+              </article>
+
+              <!-- Add to cart button  -->
+              <include src="partials/global/_button-index.html"></include>
+            </div>
+          </div>
+        </template>
+      </div>
+    </div>
+  </div>
+</section>

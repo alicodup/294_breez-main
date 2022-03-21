@@ -1,0 +1,63 @@
+<section
+  x-data="productCollectionSwiper"
+  class="c-products-carousel overflow-hidden bg-shade-grey-100 py-8"
+>
+  <div class="container">
+    <div class="c-products-carousel__header">
+      <a href="/category.html" class="c-products-carousel__title">
+        Tincture Sprays
+      </a>
+
+      <article class="c-products-carousel__icon">
+        <include src="partials/svg/product/_spray-icon.svg"></include>
+      </article>
+
+      <article class="c-products-carousel__nav">
+        <button class="swiper-button-prev">
+          <include src="partials/svg/product/_swiper-btn-prev.svg"></include>
+        </button>
+        <button class="swiper-button-next">
+          <include src="partials/svg/product/_swiper-btn-next.svg"></include>
+        </button>
+      </article>
+    </div>
+
+    <!-- Slider main container -->
+    <article class="c-swiper c-feature-swiper">
+      <!-- Additional required wrapper -->
+      <div class="swiper-wrapper">
+        <!-- Slides -->
+        <template x-for="sprays in sprays">
+          <div class="swiper-slide">
+            <div class="">
+              <article>
+                <a
+                  href="/single-product.html"
+                  class="product-image"
+                  style="--aspect-ratio: (1 / 1)"
+                >
+                  <img :src="sprays.image" :alt="sprays.name" />
+                </a>
+              </article>
+
+              <article class="product-detail">
+                <h4 x-text="sprays.name"></h4>
+                <a href="/category.html" class="product__type">
+                  <span x-text="sprays.tag"></span>
+                </a>
+                <p x-text="sprays.price"></p>
+
+                <div>
+                  <span class="c-product-tag" x-text="sprays.type"></span>
+                </div>
+              </article>
+
+              <!-- Add to cart button  -->
+              <include src="partials/global/_button-index.html"></include>
+            </div>
+          </div>
+        </template>
+      </div>
+    </article>
+  </div>
+</section>

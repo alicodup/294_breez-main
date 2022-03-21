@@ -1,0 +1,18 @@
+.c-checkout-nav {
+  @apply bg-primary;
+  position: sticky;
+  top: 72px;
+  @apply z-50;
+
+  .c-checkout-nav__inner {
+    @apply py-2;
+
+    a {
+      display: inline-block;
+    }
+
+    h4 {
+      @apply pb-0 mb-0;
+    }
+  }
+}

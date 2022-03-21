@@ -1,0 +1,37 @@
+<section
+  id="precise-dosing"
+  class="c-alt-columns bg-shade"
+  :class="activeNav === $el.id ? 'is-active' : ''"
+  x-intersect:enter.half="activeNav = $el.id"
+>
+  <div class="container md:px-1-cols lg:px-0">
+    <div class="c-alt-columns__inner">
+      <div class="cols-container">
+        <article class="column-content w-6-cols md:w-8-cols lg:w-5-cols">
+          <h2>Precise Dosing</h2>
+          <p>
+            Getting the right dose is the key to getting the benefits you want
+            from cannabis without feeling too ‘high’, anxious or sleepy. This is
+            especially important when it comes to THC which is responsible for
+            psychoactivity (feeling ‘high’) as well as effects like pain relief
+            and relaxation. Most people find their perfect dose between 5 and 15
+            milligrams of THC.
+          </p>
+          <p>
+            To make it easy to find your sweet spot, Breez Mints and Breez
+            Sprays come in three precise doses: Micro-Dose, Standard-Dose and
+            Extra-Strength. If you’re new to cannabis, we recommend starting
+            with the Micro-Dose Low THC products which contain 2.5 milligrams of
+            THC each. Take a single dose (one mint or one spray) and wait at
+            least 2 hours to feel the full effects before taking more.
+          </p>
+        </article>
+        <article
+          class="column-icon w-6-cols md:w-8-cols lg:w-5-cols lg:ml-2-cols"
+        >
+          <include src="partials/svg/cannabis-101/_precice-dose.svg"></include>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>

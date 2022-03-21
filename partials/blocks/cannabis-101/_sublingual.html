@@ -1,0 +1,39 @@
+<section
+  id="sublingual"
+  class="c-alt-columns"
+  :class="activeNav === $el.id ? 'is-active' : ''"
+  x-intersect:enter.half="activeNav = $el.id"
+>
+  <div class="container md:px-1-cols lg:px-0">
+    <div class="c-alt-columns__inner">
+      <div class="cols-container alternate">
+        <article
+          class="column-content w-6-cols md:w-8-cols lg:w-5-cols lg:mr-1-cols"
+        >
+          <h2>Sublingual delivery</h2>
+          <p>
+            Breez Mints and Breez Tincture Sprays are designed to be consumed
+            sublingually (under the tongue) rather than swallowed and digested
+            like a traditional edible (gummy, chocolate, brownie). That’s
+            because sublingual delivery is faster-acting and delivers more
+            consistent and reliable effects than typical edibles. When cannabis
+            is eaten in typical edible form, the effects can be significantly
+            delayed and intensified. This leads to the intense, unpleasant
+            effects many people associate with ‘edibles’.
+          </p>
+          <p>
+            Sublingual delivery, on the other hand, allows much of the
+            Delta-9-THC to be absorbed directly into the bloodstream for a
+            gentler, more consistent experience. For consumers new to cannabis,
+            we recommend starting with a Low-THC Micro-Dose option like Breez
+            Berry Daytime and allowing it to dissolve or absorb under the
+            tongue.
+          </p>
+        </article>
+        <article class="column-icon w-6-cols md:w-8-cols lg:w-5-cols">
+          <include src="partials/svg/cannabis-101/_sublingual.svg"></include>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>

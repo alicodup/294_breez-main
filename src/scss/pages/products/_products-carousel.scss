@@ -1,0 +1,60 @@
+.c-products-carousel {
+  margin-bottom: 32px;
+
+  @screen lg {
+    margin-bottom: 60px;
+
+    &.mint-section {
+      margin-bottom: 100px;
+    }
+  }
+
+  .c-products-carousel__header {
+    @apply flex justify-between items-center;
+    @apply mb-5;
+    @apply relative;
+
+    @screen lg {
+      @apply justify-start;
+    }
+
+    .c-products-carousel__title {
+      @apply f-display;
+      @apply mb-0;
+
+      @screen lg {
+        order: 2;
+      }
+    }
+
+    .c-products-carousel__icon {
+      width: 60px;
+
+      @screen lg {
+        order: 1;
+        @apply mr-10;
+      }
+    }
+
+    .c-products-carousel__nav {
+      display: none;
+      @apply space-x-5;
+
+      @screen lg {
+        position: absolute;
+        right: 0;
+        top: 0;
+        display: block;
+        @apply flex;
+
+        button {
+          @apply transition-opacity duration-200;
+
+          &.swiper-button-disabled {
+            opacity: 0.5;
+          }
+        }
+      }
+    }
+  }
+}

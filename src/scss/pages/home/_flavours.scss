@@ -1,0 +1,87 @@
+.flavours {
+  margin-bottom: 32px;
+
+  @screen lg {
+    margin-bottom: 80px;
+  }
+
+  h2 {
+    text-align: center;
+    @apply pb-6;
+
+    @screen lg {
+      @apply pb-16;
+    }
+  }
+
+  .flavours__inner {
+    position: relative;
+
+    // *fade on bottom of grid to be used if the view more button is needed
+    // &:after {
+    //   content: "";
+    //   position: absolute;
+    //   bottom: 0;
+    //   left: 0;
+    //   height: 250px;
+    //   width: 100%;
+    //   background: rgb(255, 255, 255);
+    //   background: linear-gradient(
+    //     0deg,
+    //     rgba(255, 255, 255, 1) 40%,
+    //     rgba(255, 255, 255, 0) 100%
+    //   );
+    // }
+
+    .flavours__card {
+      @apply mb-5;
+
+      @screen lg {
+        @apply mb-9;
+      }
+
+      .card-title {
+        margin-bottom: 0;
+      }
+
+      &.is-hidden {
+        display: none;
+      }
+
+      .flavours__card-image {
+        @apply bg-shade-grey-400;
+        @apply mb-4;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: background-color 0.4s ease;
+
+        &:hover {
+          background-color: var(--hover-bg);
+        }
+
+        img {
+          width: 100%;
+          // max-width: 80%;
+          height: 120%;
+          object-fit: contain;
+          object-position: center;
+          transform: scale(0.8);
+        }
+      }
+    }
+  }
+
+  .flavours__btn {
+    position: absolute;
+    bottom: 80px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60%;
+    z-index: 2;
+
+    &.is-hidden {
+      display: none;
+    }
+  }
+}

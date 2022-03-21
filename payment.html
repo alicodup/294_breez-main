@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Breez</title>
+
+    <link rel="stylesheet" href="https://use.typekit.net/zvu3msd.css" />
+    <link rel="stylesheet" href="./src/scss/_entry.scss" />
+  </head>
+  <body>
+    <header>
+      <include src="./partials/global/_header.html"></include>
+    </header>
+
+    <main>
+      <!-- Checkout nav -->
+      <div class="c-checkout-nav">
+        <div class="container">
+          <div class="c-checkout-nav__inner">
+            <a href="/checkout.html">
+              <article class="flex items-center">
+                <div class="mr-4">
+                  <include
+                    src="partials/svg/checkout/_nav-back-arrow.svg"
+                  ></include>
+                </div>
+
+                <div>
+                  <h4>Back to checkout</h4>
+                </div>
+              </article>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Hero section -->
+      <include src="./partials/blocks/payment/_hero.html"></include>
+
+      <include src="./partials/blocks/payment/_form.html"></include>
+
+      <include src="partials/blocks/payment/_summary.html"></include>
+    </main>
+
+    <footer>
+      <include src="./partials/global/_footer.html"></include>
+    </footer>
+
+    <!-- Dev grid -->
+    <include src="./partials/utilities/_dev-grid.html"></include>
+
+    <script type="module" src="./src/js/_entry.js"></script>
+  </body>
+</html>

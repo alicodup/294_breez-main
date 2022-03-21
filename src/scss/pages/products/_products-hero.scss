@@ -1,0 +1,23 @@
+.products-hero {
+  @apply bg-primary;
+  @apply py-8;
+  // margin-top: 72px;
+  margin-bottom: 32px;
+
+  @screen lg {
+    margin-bottom: 80px;
+  }
+
+  .products-hero__inner {
+    .products-hero__image {
+      height: 550px;
+      @apply -mb-32;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+}

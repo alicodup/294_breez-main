@@ -1,0 +1,58 @@
+.footer__inner {
+  @apply bg-shade-grey-100;
+  @apply pt-5 pb-10;
+
+  @screen lg {
+    @apply bg-white;
+    @apply pt-20 pb-0;
+  }
+
+  .footer__logo-lg {
+    svg {
+      width: 70px;
+    }
+  }
+
+  nav {
+    a {
+      @apply f-display-sm;
+      line-height: 10px;
+      @apply text-shade-primary-200;
+      @apply mb-0;
+    }
+  }
+
+  .footer__social {
+    display: flex;
+    @apply text-shade-black;
+    @apply space-x-2;
+
+    @screen lg {
+      @apply mt-16;
+      justify-content: flex-end;
+    }
+
+    svg {
+      width: 40px;
+    }
+  }
+
+  .footer__legal {
+    @apply f-display-xsm;
+    display: flex;
+    justify-content: space-between;
+
+    @screen lg {
+      @apply bg-primary;
+      @apply py-4;
+    }
+
+    .footer__company-details {
+      display: flex;
+      gap: 20px;
+
+      @screen lg {
+      }
+    }
+  }
+}

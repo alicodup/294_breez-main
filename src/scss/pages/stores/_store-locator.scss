@@ -1,0 +1,120 @@
+.store-locator {
+  @apply mt-header;
+  // margin-bottom: 32px;
+
+  @screen lg {
+    margin-bottom: 80px;
+  }
+
+  // Search inputs
+  .store-locator__search {
+    @apply bg-primary;
+    @apply py-3;
+
+    @screen lg {
+      display: none;
+    }
+
+    &.desktop {
+      display: none;
+
+      @screen lg {
+        display: block;
+        @apply py-16;
+      }
+
+      .radius {
+        position: absolute;
+        top: 50%;
+        right: 55px;
+        transform: translateY(-50%);
+        height: calc(100% - 10px);
+
+        .radius-btn {
+          @apply bg-primary;
+          @apply rounded-md;
+          @apply flex items-center justify-center;
+          @apply px-4;
+          height: 100%;
+        }
+      }
+
+      .radius-dropdown {
+        position: absolute;
+        top: calc(100% + theme("spacing.1"));
+        right: 0;
+        @apply bg-shade-grey-400;
+        @apply rounded-lg;
+        width: 120px;
+        @apply shadow-md;
+
+        button {
+          @apply px-3 py-2;
+          display: block;
+          width: 100%;
+          text-align: left;
+          @apply transition-all duration-150;
+
+          &:hover {
+            transform: translateX(2px);
+          }
+        }
+      }
+    }
+  }
+
+  // google map section
+  .map-section {
+    @screen lg {
+      position: sticky;
+      top: theme("spacing.header");
+    }
+
+    .c-store-locator__map {
+      height: 50vh;
+      @apply bg-primary;
+
+      @screen lg {
+        height: 95vh;
+      }
+    }
+  }
+
+  // Right col on desktop
+  .store-locator__scroll-container {
+    overflow: hidden;
+
+    .store-locator__result {
+      @apply bg-primary;
+      @apply py-4;
+
+      @screen lg {
+        @apply bg-shade-grey-500;
+        @apply py-10;
+      }
+    }
+
+    .store-locator__details {
+      border-bottom: 1px solid theme("colors.primary");
+      @apply my-10;
+      @apply pb-5;
+
+      @screen lg {
+        @apply pb-20;
+      }
+
+      .details__contact {
+        @apply flex items-center;
+
+        svg {
+          @apply mr-2;
+        }
+
+        p {
+          @apply f-body;
+          @apply mb-0;
+        }
+      }
+    }
+  }
+}

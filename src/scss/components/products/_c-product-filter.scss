@@ -1,0 +1,71 @@
+.c-product-filter {
+  @apply bg-primary;
+  @apply rounded-md;
+
+  .c-product-filter__inner {
+    @apply flex justify-around items-center;
+    @apply py-4;
+
+    form {
+      width: 80%;
+    }
+
+    select {
+      display: none;
+    }
+
+    .c-single-filter {
+      @apply py-2 pl-4 pr-2;
+      position: relative;
+      background-color: theme("colors.shade-grey-200");
+      @apply rounded-md;
+      @apply w-full;
+      @apply f-display-sm font-normal;
+      width: 100%;
+      display: flex;
+      align-items: center;
+
+      button {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+
+        .c-single-filter__button-arrow {
+          @apply bg-primary;
+          @apply rounded-md;
+
+          svg {
+            @apply transition-transform duration-150;
+          }
+
+          &.open {
+            svg {
+              transform: rotate(180deg);
+            }
+          }
+        }
+      }
+
+      .c-single-filter__dropdown {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        @apply bg-shade-grey-400;
+        @apply rounded-lg;
+        @apply shadow-md;
+        @apply z-20;
+        @apply py-2;
+
+        button {
+          @apply px-4 py-1;
+          @apply transition duration-200;
+
+          &:hover {
+            transform: translateX(2px);
+          }
+        }
+      }
+    }
+  }
+}

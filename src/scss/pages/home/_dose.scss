@@ -1,0 +1,25 @@
+.dose {
+  margin-bottom: 32px;
+
+  @screen lg {
+    margin-bottom: 80px;
+  }
+
+  h2 {
+    text-align: center;
+    width: 80%;
+    @apply mx-auto;
+    @apply pb-0;
+  }
+
+  .dose__inner {
+    @apply bg-shade-grey-100;
+    @apply px-6 pt-20 pb-12;
+
+    .dose__icon {
+      svg {
+        @apply mx-auto;
+      }
+    }
+  }
+}

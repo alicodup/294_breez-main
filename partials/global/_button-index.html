@@ -1,0 +1,54 @@
+<div
+  x-data="{
+        step: 0
+      }"
+  x-cloak
+  class="swiper-no-swiping"
+>
+  <button
+    type="button"
+    x-show="step === 0"
+    @click="step = 1"
+    class="btn-primary swiper-no-swiping"
+  >
+    Add to Cart
+  </button>
+
+  <div
+    x-show="step === 1"
+    x-data="quantity(1)"
+    class="btn-primary btn-quantity"
+  >
+    <template x-if="quantity <= 1">
+      <button
+        type="button"
+        @click="step = 0"
+        aria-label="Remove"
+        class="swiper-no-swiping"
+      >
+        <a href="#!">
+          <include src="./partials/svg/cart/_bin-icon.svg"></include>
+        </a>
+      </button>
+    </template>
+    <template x-if="quantity > 1">
+      <button
+        type="button"
+        @click="decrease()"
+        aria-label="Minus"
+        class="swiper-no-swiping"
+      >
+        <include src="./partials/svg/cart/_minus-icon.svg"></include>
+      </button>
+    </template>
+    <p class="f-body-lg" x-text="quantity"></p>
+    <button
+      type="button"
+      @click="increase()"
+      aria-label="Add"
+      class="swiper-no-swiping"
+    >
+      <include src="./partials/svg/cart/_add-icon.svg"></include>
+    </button>
+  </div>
+</div>

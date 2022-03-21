@@ -1,0 +1,61 @@
+<form class="c-payment-form lg:pt-20">
+  <div class="container lg:px-3-cols">
+    <div class="flex justify-between mb-8">
+      <h3 class="f-display font-normal sm">Payment Details</h3>
+      <include src="./partials/svg/payment/_payment-details-icon.svg"></include>
+    </div>
+
+    <fieldset class="c-input-select">
+      <select name="payment_type" id="payment_type" aria-label="Payment Type">
+        <option value="" disabled selected hidden>Payment Type</option>
+        <option value="card">Card</option>
+        <option value="cash">Cash</option>
+      </select>
+      <include src="./partials/svg/filter/_dropdown-icon.svg"></include>
+    </fieldset>
+
+    <fieldset
+      class="c-input mt-6"
+      x-data="{
+      file: null,
+    }"
+    >
+      <input
+        type="file"
+        class="hidden"
+        name="photoID"
+        id="photoID"
+        placeholder="Photo ID"
+        aria-label="Photo ID"
+        x-ref="upload"
+        @change="file = $event.target.files[0].name || ''"
+      />
+      <input
+        type="text"
+        id="filename"
+        autocomplete="off"
+        readonly
+        placeholder="Photo ID"
+        aria-label="Photo ID"
+        x-model="file"
+      />
+
+      <button
+        class="send-icon"
+        @click="$refs.upload.click()"
+        type="button"
+        aria-controls="filename"
+        aria-label="Upload file"
+      >
+        <div class="send-icon">
+          <div>
+            <include src="partials/svg/payment/_photo-id-icon.svg"></include>
+          </div>
+          <div>
+            <include src="partials/svg/payment/_photo-id-icon.svg"></include>
+          </div>
+        </div>
+      </button>
+    </fieldset>
+  </div>
+</form>

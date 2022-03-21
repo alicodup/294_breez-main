@@ -1,0 +1,105 @@
+<section x-data="formatsParallax" class="formats">
+  <div class="formats__lifestyle-image lg:hidden">
+    <img src="/images/home/lifestyle-image.jpg" alt="" />
+  </div>
+
+  <div
+    class="md:container md:px-1-cols lg:px-0 lg:flex lg:flex-col lg:max-w-screen-xl xl:max-w-screen-xl relative"
+  >
+    <div class="formats__title">
+      <h2>Our Products</h2>
+    </div>
+
+    <!-- Mint category -->
+    <article class="formats__category lg:pb-60 xl:pb-40">
+      <div class="formats__category-top py-8 text-mint">
+        <div class="rotate-6 w-10/12" style="--aspect-ratio: (4 / 3)">
+          <img src="/Mints/Breez-Mints-RoyalMint-Hybrid.png" alt="" />
+        </div>
+      </div>
+
+      <div class="formats__category-bottom text-shade-mint">
+        <div class="category-bottom__inner">
+          <div class="category-bottom__icon">
+            <include src="partials/svg/product/_mint-icon.svg"></include>
+          </div>
+
+          <div class="category-bottom__content">
+            <h3>Mints</h3>
+            <p>
+              Stay fresh with our cannabis-infused mints. Packed in a
+              pocket-friendly tin, these mints offer convenient, precise dosing
+              for daily use.
+            </p>
+
+            <a href="/category.html">
+              <button class="btn-primary">Order Now</button>
+            </a>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- Spray category -->
+    <article class="formats__category spray self-end lg:z-10">
+      <div class="formats__category-top lg:py-2 text-pink">
+        <div
+          class="w-full h-72 lg:h-96 -rotate-12"
+          style="--aspect-ratio: (4 / 3)"
+        >
+          <img src="/Sprays/Breez-Sprays-BerryNighttime.png" alt="" />
+        </div>
+      </div>
+
+      <div class="formats__category-bottom spray text-shade-pink">
+        <div class="category-bottom__inner">
+          <div class="category-bottom__icon spray">
+            <include src="partials/svg/product/_spray-icon.svg"></include>
+          </div>
+
+          <div class="category-bottom__content">
+            <h3>Tincture Sprays</h3>
+            <p>
+              Breez in, breathe out – our tinctures offer a fast-acting dose
+              with just one spray.
+            </p>
+
+            <a href="/category.html">
+              <button class="btn-primary">Order Now</button>
+            </a>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- Tablets category -->
+    <article class="formats__category">
+      <div class="formats__category-top py-8 text-shade-grey-300">
+        <div class="w-10/12 -rotate-12" style="--aspect-ratio: (4 / 3)">
+          <img src="/Tablets/Breez-Tablets-Indica.png" alt="" />
+        </div>
+      </div>
+
+      <div class="formats__category-bottom text-shade-grey-200">
+        <div class="category-bottom__inner">
+          <div class="category-bottom__icon">
+            <include src="partials/svg/product/_tablet-icon.svg"></include>
+          </div>
+
+          <div class="category-bottom__content">
+            <h3>Tablets</h3>
+            <p>
+              Turn it up with our extra-strength tablets. Fast-acting and 100%
+              natural, these are perfect for experienced consumers who are after
+              a more amplified dose.
+            </p>
+
+            <a href="/category.html">
+              <button class="btn-primary">Order Now</button>
+            </a>
+          </div>
+        </div>
+      </div>
+    </article>
+  </div>
+</section>

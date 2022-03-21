@@ -1,0 +1,52 @@
+.c-hero {
+  margin-bottom: 32px;
+
+  @screen lg {
+    @apply bg-primary;
+    margin-bottom: 80px;
+  }
+
+  .c-hero__inner {
+    position: relative;
+
+    @screen lg {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 504px;
+    }
+
+    .c-hero__image {
+      height: 224px;
+      width: 100%;
+      position: relative;
+
+      @screen md {
+        height: 550px;
+      }
+      @screen lg {
+        bottom: -80px;
+      }
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: top;
+      }
+
+      .c-hero__header {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 5;
+
+        svg {
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+  }
+}

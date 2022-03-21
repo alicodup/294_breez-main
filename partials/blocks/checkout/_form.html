@@ -1,0 +1,119 @@
+<form class="c-checkout-form">
+  <div class="container space-y-5">
+    <h3 class="hidden lg:block">Checkout</h3>
+    <div class="flex justify-between mb-8">
+      <h3 class="f-display font-normal">Personal Details</h3>
+      <include
+        src="./partials/svg/checkout/_personal-details-icon.svg"
+      ></include>
+    </div>
+    <div class="flex gap-2">
+      <input
+        type="text"
+        name="first-name"
+        id="first-name"
+        placeholder="First Name"
+        aria-label="First Name"
+      />
+      <input
+        type="text"
+        name="last-name"
+        id="last-name"
+        placeholder="Last Name"
+        aria-label="Last Name"
+      />
+    </div>
+    <input
+      type="text"
+      name="email"
+      id="email"
+      placeholder="Email Address"
+      aria-label="Email Address"
+    />
+    <input
+      type="text"
+      name="phone"
+      id="phone"
+      placeholder="Phone No."
+      aria-label="Phone No."
+    />
+
+    <div class="flex justify-between my-8">
+      <h3 class="f-display font-normal">Delivery Details</h3>
+      <include
+        src="./partials/svg/checkout/_delivery-details-icon.svg"
+      ></include>
+    </div>
+
+    <input
+      type="text"
+      name="street1"
+      id="street1"
+      placeholder="Street Address 1"
+      aria-label="Street Address 1"
+    />
+    <input
+      type="text"
+      name="street2"
+      id="street2"
+      placeholder="Street Address 2"
+      aria-label="Street Address 2"
+    />
+    <input
+      type="text"
+      name="apt"
+      id="apt"
+      placeholder="Apt/Suite/Floor"
+      aria-label="Apt/Suite/Floor"
+    />
+    <input
+      type="text"
+      name="zip"
+      id="zip"
+      placeholder="Zip Code"
+      aria-label="Zip Code"
+    />
+
+    <div class="c-input">
+      <input
+        type="text"
+        name="delivery"
+        id="delivery"
+        placeholder="Select Delivery Slot"
+        aria-label="Select Delivery Slot"
+      />
+
+      <div class="send-icon">
+        <div>
+          <include
+            src="partials/svg/checkout/_delivery-slot-icon.svg"
+          ></include>
+        </div>
+        <div>
+          <include
+            src="partials/svg/checkout/_delivery-slot-icon.svg"
+          ></include>
+        </div>
+      </div>
+    </div>
+
+    <div class="flex justify-between my-8">
+      <h3 class="f-display font-normal">Extra</h3>
+      <include src="./partials/svg/checkout/_extra-icon.svg"></include>
+    </div>
+    <input
+      type="text"
+      name="promo"
+      id="promo"
+      placeholder="Promo Code"
+      aria-label="Promo Code"
+    />
+    <textarea
+      name="delivery_notes"
+      id="delivery_notes"
+      cols="30"
+      rows="10"
+      placeholder="Delivery Notes / Message to Driver"
+    ></textarea>
+  </div>
+</form>
